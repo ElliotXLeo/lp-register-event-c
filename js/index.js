@@ -42,7 +42,7 @@ const callApi = (e) => {
       form['email'].value = '';
       form['company'].value = '';
       form['date'].value = '';
-      
+
     } else {
       Swal.fire({
         position: 'center',
