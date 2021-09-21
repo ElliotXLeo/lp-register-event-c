@@ -1,0 +1,393 @@
+:root {
+  --theme-color: #fff;
+  --primary-color: #9bc2d2;
+  --secondary-color: #ff7d24;
+  --text-color: #fff;
+  --text-color-inverse: #000;
+  --focus-color: #ffd700;
+  --success-color: #48a700;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'SF UI Display Thin';
+  src: url(../fonts/sf-ui-display/sf-ui-display-thin-58646e9b26e8b.otf);
+}
+
+@font-face {
+  font-family: 'SF UI Display Semi Bold';
+  src: url(../fonts/sf-ui-display/sf-ui-display-semibold-58646eddcae92.otf);
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url(../fonts/sf-ui-display/sf-ui-display-medium-58646be638f96.otf);
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.body {
+  background-color: var(--primary-color);
+  font-family: 'SF UI Display Thin';
+  color: var(--text-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../img/backgroundmobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+
+.main__ancor {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__titles {
+  padding: 1rem 0.5rem;
+}
+
+.main__instructions {
+  font-size: 1.125rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+.main__title {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-family: 'SF UI Display';
+  font-weight: 700;
+  max-width: 426px;
+}
+
+.main__title::before {
+  content: '';
+  position: absolute;
+  background-color: var(--theme-color);
+  left: -0.5rem;
+  width: 0.1rem;
+  top: calc(100% - 1rem);
+  height: 1.5rem;
+  opacity: 0.5;
+}
+
+.main__title::after {
+  content: '';
+  position: absolute;
+  border-bottom: 0.125rem solid var(--theme-color);
+  left: -0.5rem;
+  width: 100%;
+  top: calc(100% + 0.5rem);
+  opacity: 0.5;
+}
+
+.main__meeting-title {
+  font-size: 1.375rem;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+  margin: 0.5rem auto;
+}
+
+.main__meeting-info {
+  display: flex;
+  align-items: center;
+}
+
+.main__meeting-img {
+  margin-right: 0.5rem;
+  transform: scale(0.8);
+}
+
+.main__meeting-title-info {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.main__meeting-title-info--semibold {
+  font-family: 'SF UI Display Semi Bold';
+}
+
+.main__channels {
+  margin: 1rem 0;
+}
+
+.main__channels-title {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.main__channels-logo {
+  margin-right: 0.5rem;
+}
+
+.registration {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.registration__titles {
+  position: relative;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.registration__titles-title {
+  text-transform: uppercase;
+  font-family: 'SF UI Display';
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.registration__titles-message {
+  font-family: 'SF UI Display';
+  font-weight: 700;
+  font-size: 1.375;
+  margin: 0;
+}
+
+.registration__titles-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: zoom 3s infinite;
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 426px;
+  margin: 0 auto;
+}
+
+.registration__input-text {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0.1em solid var(--theme-color);
+  color: var(--text-color);
+  outline: none;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.registration__input-text:focus {
+  border: 0.1em solid var(--focus-color);
+}
+
+.registration__input-text::placeholder {
+  color: var(--text-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+.registration__select {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: transparent;
+  border: 0.1em solid var(--theme-color);
+  color: var(--text-color);
+  outline: none;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 1.5rem auto, 100%;
+  transition: all 0.1s;
+}
+
+.registration__select:focus {
+  border: 0.1em solid var(--focus-color);
+  background-color: var(--primary-color);
+}
+
+.registration__checkbox {
+  display: flex;
+  margin: 1rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+
+.registration__checkbox-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  appearance: none;
+  max-width: 16px;
+  width: 100%;
+  height: 16px;
+  border: 0.1em solid var(--theme-color);
+  transition: all 0.5s;
+}
+
+.registration__checkbox-input:hover {
+  background-color: var(--focus-color);
+  opacity: 0.8;
+}
+
+.registration__checkbox-input::after {
+  content: '✔';
+  font-size: 1rem;
+  display: none;
+}
+
+.registration__checkbox-input:checked {
+  background-color: var(--focus-color);
+}
+
+.registration__checkbox-input:checked::after {
+  display: block;
+}
+
+.registration__button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 1.325rem;
+  text-transform: uppercase;
+  font-family: 'SF UI Display';
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.registration__button:hover {
+  filter: brightness(110%);
+  transform: scale(1.05);
+}
+
+.registration__button:hover:active {
+  transform: scale(0.9);
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/backgroundfooter.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer__img {
+  transform: scale(2);
+}
+
+.footer__instructions {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0.5rem 0;
+}
+
+.footer__channels-logo {
+  transform: scale(1.2);
+}
+
+.footer__button {
+  display: block;
+  text-decoration: none;
+  background-color: var(--success-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1rem 4rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.footer__button:hover {
+  filter: brightness(110%);
+  transform: scale(1.05);
+}
+
+.footer__button:hover:active {
+  transform: scale(0.9);
+}
+
+.mt-3rem {
+  margin-top: 3rem;
+}
+
+.mb-4rem {
+  margin-bottom: 4rem;
+}
+
+.footer__whatsapp-img {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  animation: zoom 3s infinite;
+}
+
+@media (min-width: 640px) {
+  .body__main-view {
+    display: flex;
+  }
+  .main {
+    background-image: url("../img/backgrounddesktop.svg");
+    flex: 2;
+  }
+  .main__instructions {
+    font-size: 1.5rem;
+  }
+  .main__title {
+    font-size: 1.75rem;
+  }
+  .main__meeting-title-info {
+    font-size: 1.5rem;
+  }
+  .main__meeting-title {
+    font-size: 1.5rem;
+  }
+  .main__meeting-img {
+    margin: 0.5rem 1rem 0 0;
+    transform: scale(1);
+  }
+  .registration {
+    flex: 1.5;
+  }
+}

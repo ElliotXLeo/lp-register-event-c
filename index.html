@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing Page Register Event</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="shortcut icon"
+    href="https://media-exp1.licdn.com/dms/image/C4D0BAQEOspYb-tZCUg/company-logo_200_200/0?e=2159024400&v=beta&t=D2d1AYqw1R4RARyz9Tt8bSUw6Zym6lhBGl1ljrl6USA"
+    type="image/x-icon">
 </head>
-<body>
-  <h1>Landing Page Register Event</h1>
+
+<body class="body">
+  <section class="body__main-view">
+    <main class="main">
+      <a href="#registration" class="main__ancor">
+        <header class="header">
+          <img src="./img/logoevent.svg" alt="Logo del evento">
+          <img src="./img/logocompany.svg" alt="Logo de la empresa">
+        </header>
+
+        <section class="main__titles">
+          <h2 class="main__instructions">Regístrate y conéctate a la charla gratuita</h2>
+          <h1 class="main__title">Case Packer – Encajado: <br /> La eficiencia, flexibilidad y ventajas de la
+            automatización
+            del proceso</h1>
+        </section>
+
+        <section class="main__meeting">
+          <h2 class="main__meeting-title">Evento online</h2>
+          <div class="main__meeting-info">
+            <img src="./img/iconcalendar.svg" alt="Ícono de un calendario" class="main__meeting-img">
+            <h2 class="main__meeting-title-info"><span class="main__meeting-title-info--semibold"> Miércoles 04 </span>
+              <br /> Ago. 2021
+            </h2>
+          </div>
+          <div class="main__meeting-info">
+            <img src="./img/iconwatch.svg" alt="Ícono de un calendario" class="main__meeting-img">
+            <h2 class="main__meeting-title-info"><span class="main__meeting-title-info--semibold"> 18:30 hrs </span>
+              <br />
+              (Hora Lima)
+            </h2>
+          </div>
+        </section>
+
+        <section class="main__channels">
+          <h2 class="main__channels-title">Vía:</h2>
+          <img src="./img/logozoom.svg" alt="Logo de Zoom" class="main__channels-logo">
+          <img src="./img/logoctpack.svg" alt="Logo de CT Pack" class="main__channels-logo">
+        </section>
+      </a>
+    </main>
+
+    <section class="registration" id="registration">
+      <div class="registration__titles">
+        <h2 class="registration__titles-title">Regístrate</h2>
+        <h3 class="registration__titles-message">y sé parte de nuestro evento online</h3>
+        <a href="https://api.whatsapp.com/send?phone=51997045329" class="main__ancor" target="_blank">
+          <img src="img/logowhatsapp.svg" alt="Logo de WhatsApp" class="registration__titles-img">
+        </a>
+      </div>
+      <form action="#" class="registration__form" id="form">
+        <input type="text" class="registration__input-text" placeholder="Nombres y Apellidos" id="nameSurname" required>
+        <input type="number" class="registration__input-text" placeholder="Teléfono" id="telephone" required>
+        <input type="email" class="registration__input-text" placeholder="Correo Electrónico" id="email" required>
+        <input type="text" class="registration__input-text" placeholder="Empresa" id="company" required>
+        <select class="registration__select" id="date" required>
+          <option value="">Seleccione fecha</option>
+          <option value="fecha1">Fecha 1</option>
+          <option value="fecha2">Fecha 2</option>
+          <option value="fecha3">Fecha 3</option>
+        </select>
+        <label class="registration__checkbox">
+          <input type="checkbox" class="registration__checkbox-input" id="terms" required />
+          <div>
+            ACEPTO LOS TÉRMINOS Y CONDICIONES. (*)
+            En cumplimiento de la Ley 29733 y su reglamento, la información proporcionada será incorporada a la base de
+            datos de RSTEC.
+          </div>
+        </label>
+        <button type="submit" class="registration__button" id="button">Enviar</button>
+      </form>
+    </section>
+  </section>
+
+  <footer class="footer">
+    <img src="./img/logoevent.svg" alt="Logo del evento" class="footer__img mb-4rem">
+    <h2 class="footer__instructions">Gracias por registrarte y confirmar tu asistencia a nuestro evento virtual.</h2>
+    <h2 class="footer__instructions">Próximamente te enviaremos el link de Zoom</h2>
+    <img src="./img/logozoom.svg" alt="Logo de Zoom" class="footer__channels-logo">
+    <h2 class="footer__instructions">a la reunión.</h2>
+    <a type="submit" href="https://rstsac.pe" class="footer__button">Ir a nuestra web</a>
+    <img src="./img/logocompany.svg" alt="Logo de la empresa" class="footer__img mt-3rem">
+    <a href="https://api.whatsapp.com/send?phone=51997045329" target="_blank">
+      <img src="img/logowhatsapp.svg" alt="Logo de WhatsApp" class="footer__whatsapp-img">
+    </a>
+  </footer>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
+
 </html>
